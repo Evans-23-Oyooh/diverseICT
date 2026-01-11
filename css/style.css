@@ -4464,15 +4464,18 @@ body {
     
     /* Navbar mobile */
     .navbar {
-        padding: 10px 0;
+        padding: 15px 0;
     }
     
     .navbar .container {
         padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .logo img {
-        height: 40px;
+        height: 35px;
     }
     
     /* Hamburger menu */
@@ -4482,6 +4485,9 @@ body {
         cursor: pointer;
         z-index: 1001;
         position: relative;
+        padding: 10px;
+        background: rgba(30, 58, 138, 0.1);
+        border-radius: 5px;
     }
     
     .hamburger span {
