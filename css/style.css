@@ -5344,106 +5344,145 @@ body {
     color: #1e3a8a;
     font-size: 14px;
 }
-/* Admissions Page Mobile Responsive */
+/* Admissions Page Mobile Responsive - Enhanced */
 @media (max-width: 768px) {
     /* Admission Overview Mobile */
+    .admission-overview {
+        padding: 20px 0;
+    }
+    
+    .admission-overview .container {
+        padding: 0 8px;
+    }
+    
     .admission-overview .row {
         flex-direction: column;
+        margin: 0;
     }
     
     .admission-overview .col-md-6 {
         width: 100%;
-        margin-bottom: 20px;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+    
+    .overview-content {
+        padding: 12px 8px;
     }
     
     .overview-content h2 {
-        font-size: clamp(1.3rem, 4vw, 1.6rem);
-        margin-bottom: 12px;
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+        margin-bottom: 10px;
+        line-height: 1.2;
     }
     
     .overview-content p {
-        font-size: clamp(13px, 3vw, 15px);
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: clamp(12px, 3vw, 14px);
+        line-height: 1.4;
+        margin-bottom: 16px;
     }
     
     /* Admission Highlights Mobile */
     .admission-highlights {
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
     
     .highlight {
-        flex-direction: row;
+        display: flex;
         align-items: center;
-        padding: 12px;
+        padding: 10px 8px;
         background: #f8fafc;
         border-radius: 6px;
-        margin-bottom: 10px;
+        border-left: 3px solid #1e3a8a;
+        width: 100%;
     }
     
     .highlight i {
-        font-size: 1.5rem;
-        margin-right: 12px;
+        font-size: 1.2rem;
+        margin-right: 10px;
         flex-shrink: 0;
-        width: 40px;
+        width: 30px;
         text-align: center;
+        color: #1e3a8a;
+    }
+    
+    .highlight div {
+        flex: 1;
     }
     
     .highlight h4 {
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        margin-bottom: 4px;
+        font-size: clamp(14px, 3vw, 16px);
+        margin-bottom: 2px;
+        color: #1e3a8a;
     }
     
     .highlight p {
-        font-size: clamp(12px, 2.5vw, 14px);
+        font-size: clamp(11px, 2.5vw, 13px);
         margin: 0;
+        color: #666;
     }
     
     /* Admission Stats Mobile */
     .admission-stats {
-        padding: 20px 15px;
+        padding: 16px 8px;
         border-radius: 8px;
-        margin-top: 20px;
+        margin-top: 16px;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
     }
     
     .admission-stats h3 {
-        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
-        margin-bottom: 16px;
+        font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+        margin-bottom: 12px;
         text-align: center;
+        color: #f59e0b;
     }
     
     .admission-stats .stat-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
         border-bottom: 1px solid rgba(255,255,255,0.2);
     }
     
+    .admission-stats .stat-item:last-child {
+        border-bottom: none;
+    }
+    
     .admission-stats .stat-number {
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        display: block;
-        margin-bottom: 4px;
+        font-size: clamp(1.2rem, 4vw, 1.6rem);
+        font-weight: 700;
+        color: #f59e0b;
     }
     
     .admission-stats .stat-label {
-        font-size: clamp(12px, 2.5vw, 14px);
-        display: block;
+        font-size: clamp(11px, 2.5vw, 13px);
+        color: white;
+        opacity: 0.9;
     }
     
     /* Process Timeline Mobile */
+    .application-process {
+        padding: 20px 0;
+    }
+    
     .process-timeline {
         max-width: 100%;
         margin: 0;
+        position: relative;
     }
     
     .process-timeline::before {
-        left: 20px;
+        left: 16px;
         width: 2px;
+        background: #e5e7eb;
     }
     
     .timeline-item {
-        margin-bottom: 30px;
-        padding-left: 60px;
+        margin-bottom: 20px;
+        padding-left: 50px;
         position: relative;
     }
     
@@ -5451,158 +5490,270 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        width: 40px;
-        height: 40px;
-        font-size: clamp(14px, 3vw, 16px);
+        width: 32px;
+        height: 32px;
+        font-size: clamp(12px, 3vw, 14px);
         border-radius: 50%;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
     }
     
     .timeline-content {
-        padding: 16px 12px;
-        border-radius: 8px;
+        padding: 12px 8px;
+        border-radius: 6px;
         border-left: 3px solid #1e3a8a;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     
     .timeline-content h4 {
-        font-size: clamp(1.1rem, 3vw, 1.3rem);
-        margin-bottom: 8px;
+        font-size: clamp(14px, 3vw, 16px);
+        margin-bottom: 6px;
+        color: #1e3a8a;
     }
     
     .timeline-content p {
-        font-size: clamp(13px, 2.5vw, 15px);
-        line-height: 1.5;
-        margin-bottom: 10px;
+        font-size: clamp(11px, 2.5vw, 13px);
+        line-height: 1.4;
+        margin-bottom: 8px;
+        color: #666;
     }
     
     /* Application Deadlines Mobile */
+    .application-deadlines {
+        padding: 20px 0;
+        background: #f8fafc;
+    }
+    
     .deadlines-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 12px;
+        width: 100%;
     }
     
     .deadline-card {
-        padding: 16px 12px;
-        border-radius: 8px;
+        padding: 12px 8px;
+        border-radius: 6px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        width: 100%;
     }
     
     .intake-header {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-        margin-bottom: 16px;
+        gap: 6px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e5e7eb;
     }
     
     .intake-header h3 {
-        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        font-size: clamp(14px, 3vw, 16px);
+        margin: 0;
+        color: #1e3a8a;
     }
     
     .intake-status {
-        font-size: clamp(10px, 2vw, 12px);
-        padding: 4px 8px;
+        font-size: clamp(9px, 2vw, 11px);
+        padding: 3px 6px;
+        border-radius: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    .intake-status.open {
+        background: #10b981;
+        color: white;
+    }
+    
+    .intake-status.upcoming {
+        background: #f59e0b;
+        color: white;
     }
     
     .deadline-info {
-        margin-bottom: 16px;
-    }
-    
-    .deadline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        margin-bottom: 8px;
-        padding: 6px 0;
-    }
-    
-    .deadline-item strong {
-        font-size: clamp(13px, 2.5vw, 15px);
-    }
-    
-    .deadline-item span {
-        font-size: clamp(12px, 2.5vw, 14px);
-    }
-    
-    /* Required Documents Mobile */
-    .documents-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .document-category {
-        padding: 16px 12px;
-        border-radius: 8px;
-    }
-    
-    .document-category h3 {
-        font-size: clamp(1.1rem, 3vw, 1.3rem);
         margin-bottom: 12px;
     }
     
+    .deadline-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 6px;
+        padding: 4px 0;
+    }
+    
+    .deadline-item strong {
+        font-size: clamp(11px, 2.5vw, 13px);
+        color: #1e3a8a;
+    }
+    
+    .deadline-item span {
+        font-size: clamp(10px, 2.5vw, 12px);
+        color: #666;
+    }
+    
+    /* Required Documents Mobile */
+    .required-documents {
+        padding: 20px 0;
+    }
+    
+    .documents-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .document-category {
+        padding: 12px 8px;
+        border-radius: 6px;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        width: 100%;
+    }
+    
+    .document-category h3 {
+        font-size: clamp(14px, 3vw, 16px);
+        margin-bottom: 10px;
+        color: #1e3a8a;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .document-category h3 i {
+        font-size: clamp(12px, 2.5vw, 14px);
+    }
+    
+    .document-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
     .document-list li {
-        font-size: clamp(13px, 2.5vw, 15px);
-        margin-bottom: 8px;
+        font-size: clamp(11px, 2.5vw, 13px);
+        margin-bottom: 6px;
         padding-left: 20px;
+        position: relative;
+        color: #666;
+        line-height: 1.3;
+    }
+    
+    .document-list li i {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #10b981;
+        font-size: clamp(10px, 2vw, 12px);
     }
     
     /* Online Application Mobile */
+    .online-application {
+        padding: 20px 0;
+        background: #f8fafc;
+    }
+    
     .application-form-container {
-        padding: 20px 15px;
-        border-radius: 8px;
+        padding: 16px 8px;
+        border-radius: 6px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        width: 100%;
     }
     
     .form-section {
-        margin-bottom: 25px;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e5e7eb;
     }
     
-    .form-section h3 {
-        font-size: clamp(1.1rem, 3vw, 1.4rem);
+    .form-section:last-of-type {
+        border-bottom: none;
         margin-bottom: 16px;
     }
     
+    .form-section h3 {
+        font-size: clamp(14px, 3vw, 16px);
+        margin-bottom: 12px;
+        color: #1e3a8a;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
     .form-row {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    
+    .form-group label {
+        display: block;
+        font-size: clamp(11px, 2.5vw, 13px);
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #374151;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        min-height: 36px;
+        box-sizing: border-box;
+    }
+    
+    .form-group textarea {
+        min-height: 80px;
+        resize: vertical;
     }
     
     .form-actions {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
+        gap: 8px;
+        margin-top: 16px;
     }
     
     .form-actions .btn {
         width: 100%;
         min-width: auto;
+        padding: 10px 16px;
+        font-size: clamp(12px, 2.5vw, 14px);
     }
     
-    /* Benefits Section Mobile */
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    /* Checkbox Labels Mobile */
+    .checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: clamp(11px, 2.5vw, 13px);
+        line-height: 1.3;
+        cursor: pointer;
     }
     
-    .benefit-item {
-        padding: 16px 12px;
-        border-radius: 8px;
-    }
-    
-    .benefit-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 12px;
-    }
-    
-    .benefit-icon i {
-        font-size: 1.5rem;
-    }
-    
-    .benefit-item h4 {
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        margin-bottom: 8px;
-    }
-    
-    .benefit-item p {
-        font-size: clamp(13px, 2.5vw, 15px);
-        line-height: 1.5;
+    .checkbox-label input[type="checkbox"] {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        flex-shrink: 0;
     }
 }
